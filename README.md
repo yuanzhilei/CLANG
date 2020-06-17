@@ -1,2 +1,2 @@
-# CLANG
-c作业review
+＃CLANG
+仅用于c语言作业review
