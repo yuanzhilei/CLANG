@@ -1,14 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
+#define PI 3.1415
 
 int main()
 {
-    int a, b;
-    float x, y;
-    char c1, c2;
-    scanf("a=%d b=%d", &a, &b);
-    scanf("%f%f", &x, &y);
-    scanf("%c%c", &c1, &c2);
-    printf("a=%d,b=%d\nx=%f,y=%f\nc1=%c,c2=%c\n", a, b, x, y, c1, c2);
+    double r, h, c, s, sv, vc, vh;
+    printf("请输入圆的半径和圆柱的高度（例：r=1.5,h=3.0）：");
+    scanf("r=%lf,h=%lf", &r, &h);
+    c=2*PI; //求圆的周长
+    s=PI*pow(r,2);  //求圆的面积
+    sv=4.0*PI*pow(r,2); //求圆球的表面积
+    vc=4.0/3.0*PI*pow(r,3); //求圆球的体积
+    vh=PI*pow(r,2)*h;   //求圆柱体的体积
+    printf("圆的周长：%5.2lf\n圆的面积：%5.2lf\n圆球的表面积：%5.2lf\n圆球的体积：%5.2lf\n圆柱的体积：%5.2lf\n", c, s, sv, vc, vh);
     return 0;
 }
