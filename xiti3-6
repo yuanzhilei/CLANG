@@ -6,7 +6,7 @@ int main()
     float c, F;
     printf("请输入一个华氏度（例如：30.5）：\n");
     scanf("%f", &F);
-    c=(F-32.0);
+    c=(F-32.0)*5/9;
     printf("输入的华氏度为：%5.2f\n对应摄氏度为：%5.2f", F, c);
     return 0;
 }
