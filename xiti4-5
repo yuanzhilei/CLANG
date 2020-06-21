@@ -3,22 +3,17 @@
 
 int main()
 {
-    int score;
-    char grade;
-    printf("enter score:");
-    scanf("%d", &score);
-    if (score>=90)
-        grade='A';
-    else if (score>=80&&score<=89)
-        grade='B';
-    else if (score>=70&&score<=79)
-        grade='C';
-    else if (score>=60&&score<=69)
-        grade='D';
-    else if (score<60)
-        grade='E';
+    int a,b,c,max;
+    printf("enter a,b,c:");
+    scanf("%d,%d,%d", &a,&b,&c);
+    if (a>b&&a>c)
+        max=a;
+    else if (b>a&&b>c)
+        max=b;
+    else if (c>a&&c>b)
+        max=c;
     else
-        printf("score error!\n");
-    printf("grade=%c\n",grade);
+        printf("error!\n");
+    printf("a=%d,b=%d,c=%d,max=%d\n",a,b,c,max);
     return 0;
 }
