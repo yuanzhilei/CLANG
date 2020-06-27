@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+
+{
+
+    int le=0,sp=0,num=0,oth=0;
+    char ch;
+
+    printf("输入一些字符，数字，空格或者其他字符；以回车结束(不统计回车)：\n");
+
+    while (ch!='\n')
+    {
+        //scanf("%c", &ch);
+        ch=getchar();
+        if (ch>='A'&&ch<='z')
+            le++;
+        else if (ch>='0'&&ch<='9')
+            num++;
+        else if (ch==' ')
+            sp++;
+        else
+            oth++;
+    }
+
+    printf("字母=%d,数字=%d,空格=%d,其他字符=%d\n",le,num,sp,oth-1);
+    return 0;
+}
